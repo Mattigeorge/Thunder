@@ -1,10 +1,40 @@
-.thunder {
+header { 
     display: flex;
     justify-content: center;
+    flex-direction: column;
     color: rgb(251, 251, 251);
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 3rem;
+    font-size: 1rem;
     background-color: rgb(8, 8, 243);
-    padding: 2rem;
+    padding: 1rem;
 
 }
+.Maintitle {
+    display: flex;
+justify-content: center;
+font-size: 2rem;
+
+
+}
+.Maintext {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+
+.form-section {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.dropdownRwanda {
+
+    display: flex;
+    align-items: center;
+}
+     
+
