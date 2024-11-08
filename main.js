@@ -14,13 +14,7 @@ compareButton.addEventListener(`click`, function() {
         return;
     }
 
-    weatherResult.innerHTML = "";
-    weatherData.length = 0;
-
-    fetchWeather(citySverige, `SE`, `Sverige`);
-    fetchWeather(cityRwanda, `RW`, `Rwanda`);
-
-
+  
 
 });
 
