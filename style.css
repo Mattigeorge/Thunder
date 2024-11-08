@@ -1,20 +1,14 @@
-header {
+header { 
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
     color: rgb(251, 251, 251);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    background-color: rgba(20, 20, 20, 0.8); 
-    width: 100%;
-    text-align: center;
+    background-color: rgb(8, 157, 243);
     padding: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+
 }
-
-
-
 .Maintitle {
     display: flex;
     justify-content: center;
@@ -129,4 +123,39 @@ button:hover {
 
 .social-media a:hover {
     color: #ddd;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #bdbdbd;
+}
+
+body.dark-mode header {
+    background-color: rgba(20, 20, 20, 0.8);
+}
+
+body.dark-mode .weather-card {
+    background-color: rgba(30, 30, 30, 0.9);
+}
+
+body.dark-mode button {
+    background-color: #951f1f;
+    color: #ffffff;
+}
+
+body.dark-mode button:hover {
+    background-color: #555;
+}
+
+body.dark-mode select {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: #ffffff;
+}
+
+body.dark-mode select:focus {
+    background-color: rgba(70, 70, 70, 0.9);
+}
+
+body.dark-mode label {
+    color: #bdbdbd;
 }
