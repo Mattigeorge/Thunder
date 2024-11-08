@@ -1,13 +1,16 @@
-header { 
+header {
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: rgb(251, 251, 251);
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    background-color: rgb(8, 157, 243);
+    background-color: rgba(20, 20, 20, 0.8);
+    width: 100%;
+    text-align: center;
     padding: 1rem;
-
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
 }
 .Maintitle {
     display: flex;
