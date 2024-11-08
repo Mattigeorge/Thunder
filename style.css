@@ -5,7 +5,7 @@ header {
     color: rgb(251, 251, 251);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    background-color: rgb(8, 8, 243);
+    background-color: rgb(8, 157, 243);
     padding: 1rem;
 
 }
@@ -92,3 +92,35 @@ button:hover {
 }
      
 
+.footer {
+    background-color: rgb(8, 157, 243);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-content p,
+.footer-content a {
+    color: #fff;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #ddd;
+}
