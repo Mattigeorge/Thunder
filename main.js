@@ -4,5 +4,10 @@ const compareButton = document.getElementById(`compareButton`);
 const weatherResult = document.getElementById(`weatherResults`);
 const weatherData = [];
 
+compareButton.addEventListener(`click`, function() {
 
+    const citySverige = document.getElementById(`CitySweden`).value;
+    const cityRwanda = document.getElementById(`CityRwanda`).value;
+    
+})
 
