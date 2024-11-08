@@ -9,5 +9,12 @@ compareButton.addEventListener(`click`, function() {
     const citySverige = document.getElementById(`CitySweden`).value;
     const cityRwanda = document.getElementById(`CityRwanda`).value;
     
-})
+    if (!citySverige || !cityRwanda) {
+        alert("Vänligen välj en stad i både Sverige och Rwanda.");
+        return;
+    }
+
+  
+
+});
 
