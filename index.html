@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,50 +40,144 @@
       <button id="compareButton">Jämför</button>
     </section>
 
-<!-- Lägg till väderkort för Sverige och Rwanda -->
-<section class="results-section">
-  <!-- Väderkort för Sverige -->
-  <div class="weather-card sverige-card">
-      <div class="header">
+    <div class="weather-icon sverige-weather-icon">
+      <img
+        src="https://openweathermap.org/img/wn/10d@2x.png"
+        alt="Weather icon"
+      />
+    </div>
+    <div class="temperature-info">
+      <p class="description sverige-description">Snöfall</p>
+      <h1 class="temperature sverige-temperature">10°</h1>
+      <div class="min-max-temp sverige-min-max-temp">
+        <span>8°</span> / <span>11°</span>
+      </div>
+    </div>
+
+    <div class="weather-icon rwanda-weather-icon">
+      <img
+        src="https://openweathermap.org/img/wn/10d@2x.png"
+        alt="Weather icon"
+      />
+    </div>
+    <div class="temperature-info">
+      <p class="description rwanda-description">Snöfall</p>
+      <h1 class="temperature rwanda-temperature">10°</h1>
+      <div class="min-max-temp rwanda-min-max-temp">
+        <span>8°</span> / <span>11°</span>
+      </div>
+    </div>
+
+    <!-- Lägg till väderkort för Sverige och Rwanda -->
+    <section class="results-section">
+      <!-- Väderkort för Sverige -->
+      <div class="weather-card sverige-card">
+        <div class="header">
           <div class="location-day sverige-location">
-              <p>Väder i Sverige</p>
+            <p>Väder i Sverige</p>
           </div>
           <div class="date-time sverige-date-time">
-              <p class="date">Datum</p>
-              <p class="time">Tid</p>
+            <p class="date">Datum</p>
+            <p class="time">Tid</p>
           </div>
+        </div>
+        <!-- Ikon och temperatur-->
       </div>
-      <!-- Ikon och temperatur-->
-  </div>
 
-  <!-- Väderkort för Rwanda -->
-  <div class="weather-card rwanda-card">
-      <div class="header">
+      <!-- Väderkort för Rwanda -->
+      <div class="weather-card rwanda-card">
+        <div class="header">
           <div class="location-day rwanda-location">
-              <p>Väder i Rwanda</p>
+            <p>Väder i Rwanda</p>
           </div>
           <div class="date-time rwanda-date-time">
-              <p class="date">Datum</p>
-              <p class="time">Tid</p>
+            <p class="date">Datum</p>
+            <p class="time">Tid</p>
           </div>
+        </div>
+        <!-- Ikon och temperatur-->
       </div>
-      <!-- Ikon och temperatur-->
-  </div>
-</section>
 
-    
+      <div class="details">
+    <div class="detail-item">
+        <p class="circle sverige-precipitation">50%</p>
+        <span>Nederbörd</span>
+    </div>
+    <div class="detail-item">
+        <p class="circle sverige-humidity">75%</p>
+        <span>Luftfuktighet</span>
+    </div>
+    <div class="detail-item">
+        <p class="circle sverige-wind-speed">20 km/h</p>
+        <span>Vindhastighet</span>
+    </div>
+</div>
+
+<div class="details">
+    <div class="detail-item">
+        <p class="circle rwanda-precipitation">50%</p>
+        <span>Nederbörd</span>
+    </div>
+    <div class="detail-item">
+        <p class="circle rwanda-humidity">75%</p>
+        <span>Luftfuktighet</span>
+    </div>
+    <div class="detail-item">
+        <p class="circle rwanda-wind-speed">20 km/h</p>
+        <span>Vindhastighet</span>
+    </div>
+</div>
+
+<div class="details">
+  <div class="detail-item">
+      <p class="circle sverige-precipitation">50%</p>
+      <span>Nederbörd</span>
+  </div>
+  <div class="detail-item">
+      <p class="circle sverige-humidity">75%</p>
+      <span>Luftfuktighet</span>
+  </div>
+  <div class="detail-item">
+      <p class="circle sverige-wind-speed">20 km/h</p>
+      <span>Vindhastighet</span>
+  </div>
+</div>
+
+<div class="details">
+  <div class="detail-item">
+      <p class="circle rwanda-precipitation">50%</p>
+      <span>Nederbörd</span>
+  </div>
+  <div class="detail-item">
+      <p class="circle rwanda-humidity">75%</p>
+      <span>Luftfuktighet</span>
+  </div>
+  <div class="detail-item">
+      <p class="circle rwanda-wind-speed">20 km/h</p>
+      <span>Vindhastighet</span>
+  </div>
+</div>
+
+    </section>
+
     <footer class="footer">
       <div class="footer content">
-          <p>&copy; 2024 Thunder AB. All rights reserved.</p>
-          <p>Kontakt: <a href="mailto:info@thunderab.com">info@thunderab.com</a> | Tel: 123-456-789</p>
-          <div class="social-media">
-              <a href="https://facebook.com/ThunderAB" target="_blank">Facebook</a> |
-              <a href="https://twitter.com/ThunderAB" target="_blank">Twitter</a> |
-              <a href="https://instagram.com/ThunderAB" target="_blank">Instagram</a>
-          </div>
+        <p>&copy; 2024 Thunder AB. All rights reserved.</p>
+        <p>
+          Kontakt: <a href="mailto:info@thunderab.com">info@thunderab.com</a> |
+          Tel: 123-456-789
+        </p>
+        <div class="social-media">
+          <a href="https://facebook.com/ThunderAB" target="_blank">Facebook</a>
+          |
+          <a href="https://twitter.com/ThunderAB" target="_blank">Twitter</a> |
+          <a href="https://instagram.com/ThunderAB" target="_blank"
+            >Instagram</a
+          >
+        </div>
       </div>
-      
-  </footer>
+    </footer>
     <script src="main.js"></script>
+    <script src="theme.js"></script>
   </body>
 </html>
