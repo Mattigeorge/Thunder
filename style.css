@@ -1,3 +1,23 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('thunder.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    transition: background 0.5s ease-in-out;
+}
+
+
+
 header { 
     display: flex;
     flex-direction: column;
@@ -60,6 +80,26 @@ select {
 select:focus {
     outline: none;
     background-color: rgba(70, 70, 70, 0.9);
+}
+
+button {
+    background-color: hsl(204, 90%, 54%);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.buttontwo {
+    display: flex;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: #01111d;
 }
 
 .rwanda{
