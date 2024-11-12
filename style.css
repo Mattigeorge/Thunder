@@ -1,4 +1,16 @@
 
+header { 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(251, 251, 251);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    background-color: rgb(8, 157, 243);
+    padding: 1rem;
+
+}
+
 body {
     font-family: Arial, sans-serif;
     color: #ffffff;
@@ -17,18 +29,6 @@ body {
 }
 
 
-
-header { 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    color: rgb(251, 251, 251);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    background-color: rgb(8, 157, 243);
-    padding: 1rem;
-
-}
 .Maintitle {
     display: flex;
     justify-content: center;
