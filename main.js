@@ -85,3 +85,43 @@ function fetchWeather(city, countryCode, countryPrefix, timezone) {
             targetCard.innerHTML += `<p>Kunde inte hämta väderdata för ${city}. Fel: ${error.message}</p>`;
         });
 }
+
+function displayWeather(data, countryPrefix) {
+    // Destrukturera dataobjektet
+    const { main, weather, wind, name } = data;
+
+    // Kontrollera om nödvändiga data finns, annars logga fel och avsluta funktionen
+    if (!main || !weather || !wind || !name) {
+        console.error("Väderdata saknar nödvändiga egenskaper.");
+        return;
+    }
+
+    // Hämta väderinformation
+    const temperature = main.temp.toFixed(1); // Temperatur i Celsius
+    const feelsLike = main.feels_like.toFixed(1); // Känns som
+    const weatherDescription = weather[0].description; // Beskrivning av vädret
+    const windSpeed = wind.speed.toFixed(1); // Vindhastighet
+    const humidity = main.humidity; // Luftfuktighet
+
+    // Hitta rätt kort beroende på landsprefix
+    const targetCard = countryPrefix === 'sverige' ? sverigeCard : rwandaCard;
+
+    // Kontrollera att targetCard existerar
+    if (!targetCard) {
+        console.error("Målkort för väderuppdatering hittades inte.");
+        return;
+    }
+
+    // Bygg HTML-strängen för att visa väderinformation
+    const weatherHTML = `
+        <h2>Väder i ${name}</h2>
+        <p>Temperatur: ${temperature}°C</p>
+        <p>Känns som: ${feelsLike}°C</p>
+        <p>Beskrivning: ${weatherDescription}</p>
+        <p>Vindhastighet: ${windSpeed} m/s</p>
+        <p>Luftfuktighet: ${humidity}%</p>
+    `;
+
+    // Uppdatera HTML-innehållet i kortet
+    targetCard.innerHTML = weatherHTML;
+}
