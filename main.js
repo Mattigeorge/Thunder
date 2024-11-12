@@ -57,6 +57,7 @@ compareButton.addEventListener('click', function() {
     fetchWeather(cityRwanda, 'RW', 'rwanda', 'Africa/Kigali');
 });
 
+cac585741a56ec4e8b560ff08d11992e87fd85d8
 function fetchWeather(city, countryCode, countryPrefix, timezone) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=metric`;
 
