@@ -63,3 +63,25 @@ compareButton.addEventListener('click', function() {
     fetchWeather(citySverige, 'SE', 'sverige', 'Europe/Stockholm');
     fetchWeather(cityRwanda, 'RW', 'rwanda', 'Africa/Kigali');
 });
+
+function fetchWeather(city, countryCode, countryPrefix, timezone) {
+    const apiKey = 'DIN_API_KEY_HÄR';
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=metric&lang=sv`;
+
+    fetch(url)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Fel: ${response.status} ${response.statusText}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            displayWeather(data, countryPrefix);
+            displayLocalTime(countryPrefix, timezone);
+        })
+        .catch(error => {
+            console.error('Något gick fel:', error);
+            const targetCard = countryPrefix === 'sverige' ? sverigeCard : rwandaCard;
+            targetCard.innerHTML += `<p>Kunde inte hämta väderdata för ${city}. Fel: ${error.message}</p>`;
+        });
+}
