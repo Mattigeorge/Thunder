@@ -103,3 +103,26 @@ function displayWeather(data, countryPrefix) {
     document.querySelector(`.${countryPrefix}-humidity`).textContent = `${main.humidity}%`;
     document.querySelector(`.${countryPrefix}-wind-speed`).textContent = `${Math.round(wind.speed)} km/h`;
 }
+
+// Funktion för att hämta lokal tid för en specifik tidszon
+function displayLocalTime(countryPrefix, timezone) {
+    const options = {
+        timeZone: timezone,
+        hour: '2-digit',
+        minute: '2-digit',
+        day: 'numeric',
+        month: 'short',
+        weekday: 'long',
+    };
+    const now = new Date();
+    const formatter = new Intl.DateTimeFormat('sv-SE', options);
+    const parts = formatter.formatToParts(now);
+
+    const day = parts.find(part => part.type === 'weekday').value;
+    const date = parts.find(part => part.type === 'day').value;
+    const month = parts.find(part => part.type === 'month').value;
+    const time = parts.find(part => part.type === 'hour').value + ':' + parts.find(part => part.type === 'minute').value;
+
+    document.querySelector(`.${countryPrefix}-date-time .date`).textContent = `${day} ${date} ${month}`;
+    document.querySelector(`.${countryPrefix}-date-time .time`).textContent = time;
+}
