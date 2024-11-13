@@ -316,18 +316,72 @@ footer {
 }
 
 
-@media screen and (max-width: 600px) {
-    .footer-content {
-        flex-direction: column;
-        padding: 10px;
+@media screen and (max-width: 760px) {
+    header {
+        padding: 15;
     }
 
-    .social-media {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .hero-section {
+        height: 70vh;
+        padding: 20px;
+    }
+
+    .hero-content h2 {
+        font-size: 2em;
+    }
+
+    .hero-content p {
+        font-size: 1.2em;
+    }
+
+    .hero-content button {
+        font-size: 1em;
+        padding: 8px 15px;
+    }
+
+    .form-section {
+        flex-direction: column;
+        gap: 15;
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    select {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .weather-card {
+        width: 100%;
+        max-width: 300px;
+        padding: 15;
+    }
+
+    .temperature {
+        font-size: 2em;
+    }
+
+    .details {
+        font-size: 0.9em;
         flex-direction: column;
         gap: 10px;
     }
 
-    .footer-content p {
+    footer {
+        padding: 15px;
         font-size: 0.8em;
     }
+
+    .social-media {
+        flex-direction: row;
+        gap: 10px;
+        font-size: 0.9em;
+    }
+
+
 }
+
