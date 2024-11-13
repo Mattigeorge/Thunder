@@ -92,6 +92,7 @@ button:hover {
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 50px;
     width: 100%;
 }
 
@@ -186,30 +187,73 @@ body.dark-mode label {
     color: #bdbdbd;
 }
 
-.footer {
-    background-color: #333;
-    color: #fff;
+
+footer {
+    background-color: rgba(20, 20, 20, 0.8); 
+    color: #ffffff;
     text-align: center;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    margin-top: auto; 
+    font-size: 0.9em;
 }
-.footer-content p,
-.footer-content a {
-    color: #fff;
+
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content p {
     margin: 5px 0;
-    text-decoration: none;
 }
+
+.footer-content a {
+    color: #00aaff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
 .footer-content a:hover {
+    color: #ffc107; 
     text-decoration: underline;
 }
+
 .social-media {
     margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
+
 .social-media a {
-    margin: 0 10px;
-    color: #fff;
-    text-decoration: none;
+    font-size: 1em;
+    color: #00aaff;
+    transition: color 0.3s ease;
 }
+
 .social-media a:hover {
-    color: #ddd;
+    color: #ffc107;
+}
+
+
+@media screen and (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .social-media {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-content p {
+        font-size: 0.8em;
+    }
 }
