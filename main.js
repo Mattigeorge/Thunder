@@ -57,7 +57,7 @@ compareButton.addEventListener('click', function() {
     fetchWeather(cityRwanda, 'RW', 'rwanda', 'Africa/Kigali');
 });
 
-cac585741a56ec4e8b560ff08d11992e87fd85d8
+
 function fetchWeather(city, countryCode, countryPrefix, timezone) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=metric`;
 
@@ -126,3 +126,42 @@ function displayLocalTime(countryPrefix, timezone) {
     document.querySelector(`.${countryPrefix}-date-time .date`).textContent = `${day} ${date} ${month}`;
     document.querySelector(`.${countryPrefix}-date-time .time`).textContent = time;
 }
+
+// Funktioner för att spara och ladda städer
+function saveCities() { 
+    const citySverige = document.getElementById('StadSverige').value;
+    const cityRwanda = document.getElementById('StadRwanda').value;
+
+    localStorage.setItem('selectedCitySverige', citySverige);
+    localStorage.setItem('selectedCityRwanda', cityRwanda);
+}
+
+function loadSavedCities() {
+    const savedCitySverige = localStorage.getItem('selectedCitySverige');
+    const savedCityRwanda = localStorage.getItem('selectedCityRwanda');
+
+    if (savedCitySverige) {
+        document.getElementById('StadSverige').value = savedCitySverige;
+    }
+    if (savedCityRwanda) {
+        document.getElementById('StadRwanda').value = savedCityRwanda;
+    }
+}
+
+// Körs när sidan laddas
+window.onload = loadSavedCities;
+
+// Lägg till lyssnare för "Jämför"-knappen
+const compareButton2 = document.getElementById('compareButton');
+compareButton2.addEventListener('click', function() { 
+    const citySverige = document.getElementById('StadSverige').value;
+    const cityRwanda = document.getElementById('StadRwanda').value;
+
+    if (!citySverige || !cityRwanda) {
+        alert("Vänligen välj en stad i både Sverige och Rwanda.");
+        return;
+    }
+
+    saveCities();
+});
+
