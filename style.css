@@ -385,3 +385,69 @@ footer {
 
 }
 
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-section {
+        height: 60vh;
+        padding: 10px;
+    }
+
+    .hero-content h2{
+        font-size: 1.8em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .hero-content button {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    .form-section {
+        gap: 10px;
+        padding: 8px;
+    }
+
+    select {
+        font-size: 0.9em;
+    }
+
+    .weather-card {
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .temperature {
+        font-size: 1.8em;
+    }
+
+    .min-max-temp {
+        font-size: 0.8;
+    }
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 10px;
+        font-size: 0.75em;
+    }
+
+    .footer-content p,
+    .footer-content a {
+        font-size: 0.8em;
+    }
+
+    .social-media {
+        gap: 8px;
+        font-size: 0.8em;
+    }
+}
