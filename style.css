@@ -12,6 +12,7 @@ body {
     background-size: cover;
     background-position: center;
     transition: background 0.5s ease-in-out;
+    overflow-x: hidden;
 }
 
 header {
