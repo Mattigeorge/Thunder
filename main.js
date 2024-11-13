@@ -136,6 +136,7 @@ function saveCities() {
     localStorage.setItem('selectedCityRwanda', cityRwanda);
 }
 
+
 function loadSavedCities() {
     const savedCitySverige = localStorage.getItem('selectedCitySverige');
     const savedCityRwanda = localStorage.getItem('selectedCityRwanda');
