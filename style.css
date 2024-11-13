@@ -7,14 +7,16 @@ body {
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
-    background-image: url(''); /* Bakgrundsbild */
+    background-image: url('');
+    /* Bakgrundsbild */
     background-size: cover;
     background-position: center;
     transition: background 0.5s ease-in-out;
 }
 
 header {
-    background-color: rgba(20, 20, 20, 0.8); /* Mörkare transparent färg */
+    background-color: rgba(20, 20, 20, 0.8);
+    /* Mörkare transparent färg */
     color: #ffffff;
     width: 100%;
     text-align: center;
@@ -30,6 +32,71 @@ h1 {
 
 header p {
     margin: 10px 0 0;
+}
+
+/* Hero-sektion */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    /* Sektionen täcker nästan hela skärmen */
+    background-image: url('bakgrundsbild.gif');
+    /* Sätt sökvägen till din bakgrundsbild här */
+    background-size: cover;
+    /* Täck hela sektionen */
+    background-position: center;
+    /* Centrerar bilden */
+    background-repeat: no-repeat;
+    /* Förhindra att bilden upprepas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    /* Vit text */
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.8);
+    /* En mörk overlay för att göra texten mer läsbar */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    /* Placera innehållet ovanpå overlayen */
+}
+
+.hero-content h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #333;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: #ddd;
 }
 
 /* Justering av formsektionen */
@@ -52,14 +119,16 @@ header p {
 label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #ddd; /* Ljusare text för bättre synlighet */
+    color: #ddd;
+    /* Ljusare text för bättre synlighet */
 }
 
 select {
     padding: 8px;
     font-size: 16px;
     border-radius: 4px;
-    border: 1px solid #444; /* Mörkare kant */
+    border: 1px solid #444;
+    /* Mörkare kant */
     background-color: rgba(50, 50, 50, 0.8);
     color: #ffffff;
     transition: background-color 0.3s ease;
@@ -71,7 +140,8 @@ select:focus {
 }
 
 button {
-    background-color: #444; /* Mörkare knappfärg */
+    background-color: #444;
+    /* Mörkare knappfärg */
     color: #ffffff;
     border: 1px solid #333;
     padding: 10px 20px;
@@ -82,7 +152,8 @@ button {
 }
 
 button:hover {
-    background-color: #666; /* Ljusare färg vid hover */
+    background-color: #666;
+    /* Ljusare färg vid hover */
     border-color: #555;
 }
 
@@ -98,14 +169,16 @@ button:hover {
 
 /* Transparenta väderkort */
 .weather-card {
-    background-color: rgba(43, 61, 79, 0.85); /* Halvgenomskinlig färg */
+    background-color: rgba(43, 61, 79, 0.85);
+    /* Halvgenomskinlig färg */
     color: #ffffff;
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 250px;
-    display: none; /* Dölj korten tills data hämtas */
+    display: none;
+    /* Dölj korten tills data hämtas */
     transition: background 0.3s ease-in-out;
 }
 
@@ -189,13 +262,13 @@ body.dark-mode label {
 
 
 footer {
-    background-color: rgba(20, 20, 20, 0.8); 
+    background-color: rgba(20, 20, 20, 0.8);
     color: #ffffff;
     text-align: center;
     padding: 20px 0;
     width: 100%;
     box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-    margin-top: auto; 
+    margin-top: auto;
     font-size: 0.9em;
 }
 
@@ -220,7 +293,7 @@ footer {
 }
 
 .footer-content a:hover {
-    color: #ffc107; 
+    color: #ffc107;
     text-decoration: underline;
 }
 
