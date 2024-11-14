@@ -23,6 +23,8 @@ const weatherTranslations = {
     "moderate rain": "måttligt regn"
 };
 
+
+
 compareButton.addEventListener('click', function() {
     const citySverige = document.getElementById('StadSverige').value;
     const cityRwanda = document.getElementById('StadRwanda').value;
